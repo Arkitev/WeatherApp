@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/allerta_stencil</item>
+        <item>@font/amethysta</item>
+        <item>@font/cabin</item>
+        <item>@font/montserrat</item>
+        <item>@font/playfair_display</item>
+        <item>@font/roboto</item>
+        <item>@font/roboto_slab_light</item>
+        <item>@font/roboto_slab_thin</item>
+        <item>@font/roboto_thin</item>
+    </array>
+</resources>

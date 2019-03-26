@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    tools:context=".MainActivity"
+    android:focusableInTouchMode="true"
+    android:background="#1e1f26">
+
+    <ImageView
+        android:id="@+id/weatherImg"
+        android:layout_width="wrap_content"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/weather2" />
+
+    <EditText
+        android:id="@+id/cityEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:hint="City"
+        android:inputType="text" />
+
+    <android.support.design.button.MaterialButton
+        android:id="@+id/searchCityBt"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/cityEditText"
+        android:layout_marginTop="10dp"
+        app:backgroundTint="@android:color/transparent"
+        app:icon="@drawable/ic_search_black_24dp" />
+
+    <TextView
+        android:id="@+id/cityName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cityEditText"
+        android:layout_centerHorizontal="true"
+        android:text="Gliwice"
+        android:textColor="#e6f5ff"
+        android:textColorLink="@color/colorPrimary"
+        android:textSize="60sp"
+        app:fontFamily="@font/roboto_slab_light" />
+
+    <TextView
+        android:id="@+id/timeTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cityName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:text="12:35"
+        android:textColor="#e6f5ff"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/roboto" />
+
+    <TextView
+        android:id="@+id/dateTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/timeTxt"
+        android:layout_centerHorizontal="true"
+        android:text="Tuesday 19 March"
+        android:textColor="#e6f5ff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/roboto" />
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#909090"
+        android:layout_below="@id/weatherImg" />
+
+    <LinearLayout
+        android:id="@+id/degreesLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/separator" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:layout_weight="1"
+            android:layout_marginTop="35dp"
+            android:scaleType="fitEnd"
+            android:src="@drawable/thermometer" />
+
+        <TextView
+            android:id="@+id/degreesValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="16"
+            android:textColor="#ffffff"
+            android:textSize="100sp"
+            app:fontFamily="@font/amethysta" />
+
+        <TextView
+            android:id="@+id/degreesSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="-55dp"
+            android:layout_marginLeft="-100dp"
+            android:layout_toRightOf="@id/degreesValue"
+            android:text="℃"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            app:fontFamily="@font/amethysta" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/skyDescriptionLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/degreesLayout"
+        android:layout_marginTop="-20dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:scaleType="fitEnd"
+            android:src="@drawable/description" />
+
+        <TextView
+            android:id="@+id/descriptionTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:text=" clear sky"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            app:fontFamily="@font/amethysta" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/pressureLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/skyDescriptionLayout"
+        android:layout_marginTop="10dp" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitEnd"
+            android:src="@drawable/pressure" />
+
+        <TextView
+            android:id="@+id/pressureValue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" 1033"
+            android:textColor="#ffffff"
+            android:textSize="40sp"
+            app:fontFamily="@font/amethysta" />
+
+        <TextView
+            android:id="@+id/pressureSymbol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-100dp"
+            android:layout_weight="1"
+            android:text="  hPa"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            app:fontFamily="@font/amethysta" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/windLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/pressureLayout" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitEnd"
+            android:src="@drawable/wind" />
+
+        <TextView
+            android:id="@+id/windSpeedTxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=" 0.5"
+            android:textColor="#ffffff"
+            android:textSize="40sp"
+            app:fontFamily="@font/amethysta" />
+
+        <TextView
+            android:id="@+id/windSpeedUnit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-100dp"
+            android:layout_weight="1"
+            android:text=" m/s"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            app:fontFamily="@font/amethysta" />
+    </LinearLayout>
+
+</RelativeLayout>
